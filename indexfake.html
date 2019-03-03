@@ -22,6 +22,7 @@
       <h1> Collection of Ice Cream Flavors</h1>
       <div class = "container mt - 5">
       <div class = "card-columns" id = "icecreamflavors">
+      <div v-for = "flavor in icecreamflavors" class="card border-success mb-3" style="width: 18rem;" style="background-color: rgba(245, 245, 245, 0.4);">
         <img :src="flavor.image"  alt="..." style="width:286px;height:150px;">
         <div class="card-body">
           <h5 class="card-title">{{ flavor.name }}</h5>
