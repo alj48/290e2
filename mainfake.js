@@ -3,6 +3,7 @@ var app = new Vue({
   el: '#app',
   data: {
     message: 'Hi! From Alison and Matthew',
+    newicecreamflavor = "";
     icecreamflavors: [
       {
         name: "Cookie Dough",
@@ -65,13 +66,14 @@ descript: "Rich Creamy Vanilla Ice Cream"
 
   },
   methods: {
-    reverseMessage: function() {
+    reverseMessage() {
       this.message = this.message.split('').reverse.join('');
 
     },
-    removeflavor(removeflavor){
-      var index = this.flavor.indexOf(flavor);
-      this.icecreamflavors.splice(index, 1);
+    addflavor(){
+      this.icecreamflavors.push(this.newicecreamflavor);
+      this.newicecreamflavor= "";
+    }
     }
   }
 

@@ -19,6 +19,14 @@
         <p>{{ message }}</p>
           <button v-on:click="reverseMessage">Reverse Message</button>
         </div>
+        <h5 class = "mb-3">Add a flavor</h5>
+        <form class = "form-inline mb-5">
+          <input type="text" class = "form-control" id = "new-flavor-name" placeholder = "flavor">
+        </div>
+        <button id = "add-flavor-btn" type = "button" class = "btn btn-primary">
+          Add Flavors
+        </button>
+      </form>  
       <h1> Collection of Ice Cream Flavors</h1>
       <div class = "container mt - 5">
       <div class = "card-columns" id = "icecreamflavors">
