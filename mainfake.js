@@ -67,12 +67,15 @@ descript: "Rich Creamy Vanilla Ice Cream"
   },
   methods: {
     reverseMessage() {
-      this.message = this.message.split('').reverse.join('');
+      this.message = this.message.split('').reverse().join('');
 
     },
     addflavor(){
       this.icecreamflavors.push(this.newicecreamflavor);
       this.newicecreamflavor= "";
+      //dropdown with all the flavors in list and displays the name
+      //and when the user clicks the value, save favorite flavorr
+      //can mkae a function when this changes, you can set the favorite flavor that was selected
     }
     }
   }
