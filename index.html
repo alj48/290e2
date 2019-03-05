@@ -12,7 +12,6 @@
 
   </head>
 
-
   <body>
     <div id = "app">
       <h1> Collection of Ice Cream Flavors</h1>
@@ -24,24 +23,37 @@
           <h5 class="card-title">{{ flavor.name }}</h5>
           <p v-show = "flavor.isshow" class = "card-text">{{ flavor.descript }}</p>
           <a @click = "flavor.isshow = !flavor.isshow" href="#" class="btn btn-success btn-small">
-            <span v-show = "!flavor.isshow" > show</span>
+            <span v-show = "!flavor.isshow"> show</span>
             <span v-show = "flavor.isshow"> hide</span>
             details
           </a>
 
         </div>
-
       </div>
-
     </div>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-
 </div>
 
 
-  </div>
+<h6 class = "mb-3"> Update Your Favorite Flavor</h6>
+<form class = "form-inline">
+
+  <select id= "fav-flavor-select" class = "custom-select mr-3" v-model = "favflavor">
+    <option selected>Select Flavor...</option>
+    <option v-for = "flavor in icecreamflavors"> {{ flavor.name }} </option>
+  </select>
+
+
+  <b @click = "flavor.isfav = !flavor.isfav" href="#" class="btn btn-primary btn-small">
+  Save
+  </b>
+<span> Yay!!!!! Your Favorite Ice Cream is :  {{ favflavor }}!!!!!</span>
+</form>
+
+<h5 class = "card-title">{{ favflavor }}</h5>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
 </div>
 </body>
