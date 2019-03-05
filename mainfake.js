@@ -3,7 +3,7 @@ var app = new Vue({
   el: '#app',
   data: {
     message: 'Hi! From Alison and Matthew',
-    newicecreamflavor = "";
+    //newicecreamflavor: "",
     icecreamflavors: [
       {
         name: "Cookie Dough",
@@ -67,7 +67,8 @@ descript: "Rich Creamy Vanilla Ice Cream"
   },
   methods: {
     reverseMessage() {
-      this.message = this.message.split('').reverse().join('');
+
+      this.message = this.message.split('').reverse().join('')
 
     },
     addflavor(){
@@ -78,7 +79,7 @@ descript: "Rich Creamy Vanilla Ice Cream"
       //can mkae a function when this changes, you can set the favorite flavor that was selected
     }
     }
-  }
+
 
 
 })
