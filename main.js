@@ -3,6 +3,7 @@ var app = new Vue({
   el: "#app",
   data: {
     favflavor: "",
+    message: 'Hi! From Alison and Matthew',
 
     icecreamflavors: [
       {
@@ -72,9 +73,12 @@ isfav: false
 
     ]
 
-  }
-})
+  },
 
 methods: {
-  
+  reverseMessage() {
+    this.message = this.message.split('').reverse().join('');
+
+  }
 }
+})
